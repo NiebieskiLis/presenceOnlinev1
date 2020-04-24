@@ -6,14 +6,22 @@ import java.io.*;
 import java.net.*;
 import java.util.List;
 
-
+/**
+ * A class that is used as TCP Server which is going to get workers list and deserialize it
+ * @author Aleksandra Rezetka
+ * @version 24/04/20
+ */
 public class TCPServer {
     private ServerSocket serverSocket;
     private Socket clientSocket;
     private ObjectInputStream in;
-    
+
+    /**
+     * A class that starts server
+     * @param port it gets a port on which server is going to operate
+     */
     public void start(int port) {
-        try{
+        try {
             serverSocket = new ServerSocket(port);
             clientSocket = serverSocket.accept();
             try {
