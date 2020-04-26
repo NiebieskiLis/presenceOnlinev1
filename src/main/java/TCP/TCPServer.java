@@ -22,9 +22,11 @@ public class TCPServer {
      */
     public void start(int port) {
         try {
+            //Server opens one previously specified port
             serverSocket = new ServerSocket(port);
             clientSocket = serverSocket.accept();
             try {
+                //Here I open a new import stream with clientSocket
                 in = new ObjectInputStream(clientSocket.getInputStream());
                 WorkersList workers = (WorkersList) in.readObject();
                 for(Worker w : workers.getWorkers()){
