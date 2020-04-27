@@ -29,10 +29,10 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/../../.." value="devel" />
-        <entry key="$PROJECT_DIR$" value="devel-Ola" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -47,6 +47,40 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.TCPClient">
+    <configuration name="TCPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TCP.TCPClient" />
+      <module name="PresenceOnline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TCP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TCPServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TCP.TCPServer" />
+      <module name="PresenceOnline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TCP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TCPClient" />
+        <item itemvalue="Application.TCPServer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -87,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587768849290</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added TCP Server Class">
+      <created>1587769985226</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1587769985226</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -96,24 +137,46 @@
     <MESSAGE value="Added javadoc to file" />
     <MESSAGE value="Added again TCP Client" />
     <MESSAGE value="Deleted TCP Client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted TCP Client" />
+    <MESSAGE value="Added TCP Server Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TCP Server Class" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="424" y="9" key="CommitChangelistDialog2" timestamp="1587768847916">
+    <state x="942" y="241" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587937232935">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="424" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587768847916" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587768885882">
+    <state x="942" y="241" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1587937232935" />
+    <state x="2355" y="620" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1587824405388" />
+    <state x="424" y="9" key="CommitChangelistDialog2" timestamp="1587770210685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587768885882" />
+    <state x="424" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587770210685" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1587994733363">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587994733363" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1587994733362">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587994733362" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1587994733362">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587994733362" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1587994733362">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587994733362" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587770233891">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587770233891" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587764315674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587764315674" />
-    <state x="476" y="204" key="git4idea.merge.GitPullDialog" timestamp="1587767567789">
+    <state x="476" y="204" key="git4idea.merge.GitPullDialog" timestamp="1587769667258">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1587767567789" />
+    <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1587769667258" />
   </component>
 </project>
