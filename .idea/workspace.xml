@@ -19,30 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derby_10_15_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derbynet_10_15_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/PartTimeWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/ShiftFTW.java" afterDir="false" />
+    <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="changed a derby database settings and added some of the entites">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PresenceOnline.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PresenceOnline.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/shift/Shift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shift/ShiftFTW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shift/Shift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shift/Shift.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/workers/FullTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/workers/FullTimeWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/workers/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/workers/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/workers/PartTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/workers/PartTimeWorker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +142,7 @@
       <workItem from="1588926196203" duration="185000" />
       <workItem from="1588926510698" duration="1390000" />
       <workItem from="1588935942770" duration="1385000" />
-      <workItem from="1588947043999" duration="4089000" />
+      <workItem from="1588947043999" duration="4729000" />
     </task>
     <task id="LOCAL-00001" summary="Added TCP Server">
       <created>1587766378644</created>
@@ -198,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587769985226</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed a derby database settings and added some of the entites">
+      <created>1588951485168</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588951485168</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +212,8 @@
     <MESSAGE value="Added again TCP Client" />
     <MESSAGE value="Deleted TCP Client" />
     <MESSAGE value="Added TCP Server Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TCP Server Class" />
+    <MESSAGE value="changed a derby database settings and added some of the entites" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed a derby database settings and added some of the entites" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="304" key="#Assign_Data_Sources" timestamp="1588948299533">
@@ -280,17 +269,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="416" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588935649233" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587770233891">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588951495060">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587770233891" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587764315674">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588951495060" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588951759672">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587764315674" />
-    <state x="476" y="204" key="git4idea.merge.GitPullDialog" timestamp="1588935049634">
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588951759672" />
+    <state x="476" y="204" key="git4idea.merge.GitPullDialog" timestamp="1588951774554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1588935049634" />
+    <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1588951774554" />
   </component>
 </project>
