@@ -20,125 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derbyclient_10_15_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derbyshared_10_15_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derbytools_10_15_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/KEYS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/NOTICE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/RELEASE-NOTES.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/db.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/log/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/log/log.ctrl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/log/log1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/log/logmirror.ctrl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/README_DO_NOT_TOUCH_FILES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c10.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c101.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c111.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c121.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c130.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c141.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c150.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c161.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c171.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c180.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c191.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c1a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c1b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c1c0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c1d1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c1e0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c1f1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c20.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c200.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c211.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c221.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c230.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c241.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c251.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c260.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c271.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c281.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c290.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c2a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c2b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c2c1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c2d0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c2e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c2f0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c300.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c31.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c311.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c321.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c331.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c340.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c351.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c361.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c371.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c380.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c391.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c3a1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c3b1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c3c0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c3d1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c3e1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c3f1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c400.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c41.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c411.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c421.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c430.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c441.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c451.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c461.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c470.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c481.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c51.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c60.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c71.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c81.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/c90.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/ca1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/cb1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/cc0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/cd1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/ce1.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/seg0/cf0.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/BazaPracownikow/service.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derby.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derby.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derby.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_cs.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_de_DE.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_es.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_fr.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_hu.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_it.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_ja_JP.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_ko_KR.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_pl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_pt_BR.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_ru.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_zh_CN.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyLocale_zh_TW.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyclient.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbynet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyoptionaltools.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyrun.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyshared.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbytools.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/test/README.htm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/test/derbyTesting.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/database/DerbyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derby_10_15_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_derby_derbynet_10_15_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/PartTimeWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/database/ShiftFTW.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PresenceOnline.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PresenceOnline.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/shift/Shift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/shift/ShiftFTW.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/workers/FullTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/workers/FullTimeWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/workers/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/workers/Worker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +69,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/../../.." value="devel" />
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="devel" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -189,7 +93,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbyclient.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbynet.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -236,9 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TCPServer" />
+        <item itemvalue="Application.TCPClient" />
+        <item itemvalue="Application.DerbyTest" />
         <item itemvalue="Application.DerbyTest" />
         <item itemvalue="Application.TCPClient" />
-        <item itemvalue="Application.TCPServer" />
       </list>
     </recent_temporary>
   </component>
@@ -254,6 +160,8 @@
       <updated>1587763667468</updated>
       <workItem from="1588926196203" duration="185000" />
       <workItem from="1588926510698" duration="1390000" />
+      <workItem from="1588935942770" duration="1385000" />
+      <workItem from="1588947043999" duration="4089000" />
     </task>
     <task id="LOCAL-00001" summary="Added TCP Server">
       <created>1587766378644</created>
@@ -319,6 +227,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added TCP Server Class" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="668" y="304" key="#Assign_Data_Sources" timestamp="1588948299533">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="668" y="304" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1588948299533" />
     <state x="249" y="0" key="#Project_Structure" timestamp="1588926247211">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -336,10 +248,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="424" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587770210685" />
-    <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1588927041862">
+    <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1588935641436">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588927041862" />
+    <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588935641436" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1588927898226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -356,14 +268,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588927898226" />
-    <state x="496" y="135" key="Maven.ArtifactSearchDialog" timestamp="1588926945815">
+    <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1588950896062">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="496" y="135" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1588926945815" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1588926767120">
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588950896062" />
+    <state x="598" y="108" key="Maven.ArtifactSearchDialog" timestamp="1588947684559">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588926767120" />
+    <state x="598" y="108" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1588947684559" />
+    <state x="416" y="0" key="SettingsEditor" timestamp="1588935649233">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="416" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588935649233" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587770233891">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -372,9 +288,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587764315674" />
-    <state x="476" y="204" key="git4idea.merge.GitPullDialog" timestamp="1587769667258">
+    <state x="476" y="204" key="git4idea.merge.GitPullDialog" timestamp="1588935049634">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1587769667258" />
+    <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1588935049634" />
   </component>
 </project>
