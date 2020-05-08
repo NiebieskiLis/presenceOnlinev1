@@ -3,6 +3,9 @@ package database;
 import java.time.LocalDateTime;
 import javax.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import workers.Worker;
 
 /**
  * This class represents worker shift
@@ -16,10 +19,45 @@ public class ShiftFTW implements Cloneable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long ID_Worker;
+    @Getter
+    @Setter
     @ManyToOne
     private FullTimeWorker worker;
+    @Getter @Setter
     private LocalDateTime shiftStart;
+    @Getter @Setter
     private LocalDateTime shiftEnd;
+    @Getter @Setter
     private long noOfHours;
+    public FullTimeWorker getWorker() {
+        return worker;
+    }
 
+    public void setWorker(FullTimeWorker worker) {
+        this.worker = worker;
+    }
+
+    public LocalDateTime getShiftStart() {
+        return shiftStart;
+    }
+
+    public void setShiftStart(LocalDateTime shiftStart) {
+        this.shiftStart = shiftStart;
+    }
+
+    public LocalDateTime getShiftEnd() {
+        return shiftEnd;
+    }
+
+    public void setShiftEnd(LocalDateTime shiftEnd) {
+        this.shiftEnd = shiftEnd;
+    }
+
+    public long getNoOfHours() {
+        return noOfHours;
+    }
+
+    public void setNoOfHours(long noOfHours) {
+        this.noOfHours = noOfHours;
+    }
 }
