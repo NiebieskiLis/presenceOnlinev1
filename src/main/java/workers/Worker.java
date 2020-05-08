@@ -50,7 +50,9 @@ public abstract class Worker implements Comparable<Worker> , Cloneable , Seriali
         String login1 = name.charAt(0) + surname;
         this.login = login1.toLowerCase();
     }
+    public Worker(){
 
+    }
     public String getLogin() {
         return login;
     }
