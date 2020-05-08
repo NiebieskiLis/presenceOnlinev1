@@ -19,9 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="providing Changes after pipeline failed">
+    <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="providing Changes after pipeline failed 2 try">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/workers/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/workers/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +141,7 @@
       <workItem from="1588926196203" duration="185000" />
       <workItem from="1588926510698" duration="1390000" />
       <workItem from="1588935942770" duration="1385000" />
-      <workItem from="1588947043999" duration="5129000" />
+      <workItem from="1588947043999" duration="5720000" />
     </task>
     <task id="LOCAL-00001" summary="Added TCP Server">
       <created>1587766378644</created>
@@ -191,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588952185539</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="providing Changes after pipeline failed 2 try">
+      <created>1588952504716</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588952504716</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +227,8 @@
     <MESSAGE value="Added TCP Server Class" />
     <MESSAGE value="changed a derby database settings and added some of the entites" />
     <MESSAGE value="providing Changes after pipeline failed" />
-    <option name="LAST_COMMIT_MESSAGE" value="providing Changes after pipeline failed" />
+    <MESSAGE value="providing Changes after pipeline failed 2 try" />
+    <option name="LAST_COMMIT_MESSAGE" value="providing Changes after pipeline failed 2 try" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="304" key="#Assign_Data_Sources" timestamp="1588948299533">
@@ -275,10 +284,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="416" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588935649233" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588952192330">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1588952513620">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588952192330" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588952513620" />
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588951759672">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

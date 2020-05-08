@@ -1,8 +1,6 @@
 package database;
 
-import jdk.jfr.Enabled;
 import workers.Worker;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
