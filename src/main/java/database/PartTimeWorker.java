@@ -2,13 +2,15 @@ package database;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import workers.Worker;
+
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.GregorianCalendar;
+
 @Data
 @Entity
-public class PartTimeWorker extends Worker {
+public class PartTimeWorker  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ID_PartTimeWorker;
@@ -25,17 +27,17 @@ public class PartTimeWorker extends Worker {
     @Getter @Setter
     private int minNumberOfHours;
     @Getter @Setter
-    private Worker supervisor;
+    @ManyToOne
+    private FullTimeWorker supervisor;
     @Getter @Setter
     private Date expirationDate;
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.ALL})
     private Department department;
 
     public  PartTimeWorker(){
 
     }
-    public PartTimeWorker(String login, String password, String name, String surname, int cashPerHour, int ID_PartTimeWorker, String login1, String password1, String name1, String surname1, int cashPerHour1, int minNumberOfHours, Worker supervisor, Date expirationDate, Department department) {
-        super(login, password, name, surname, cashPerHour);
+    public PartTimeWorker(String login, String password, String name, String surname, int cashPerHour,  String login1, String password1, String name1, String surname1, int cashPerHour1, int minNumberOfHours, FullTimeWorker supervisor, Date expirationDate, Department department) {
         this.ID_PartTimeWorker = ID_PartTimeWorker;
         this.login = login1;
         this.password = password1;
@@ -48,21 +50,33 @@ public class PartTimeWorker extends Worker {
         this.department = department;
     }
 
-    public PartTimeWorker(String password, String name, String surname, int cashPerHour, int ID_PartTimeWorker, String login, String password1, String name1, String surname1, int cashPerHour1, int minNumberOfHours, Worker supervisor, Date expirationDate, Department department) {
-        super(password, name, surname, cashPerHour);
-        this.ID_PartTimeWorker = ID_PartTimeWorker;
+    public PartTimeWorker(String password, String name, String surname, int cashPerHour, int minNumberOfHours, Department department, FullTimeWorker supervisor, int year, int month, int day) {
+        String login1 = name.charAt(0) + surname;
         this.login = login;
-        this.password = password1;
-        this.name = name1;
-        this.surname = surname1;
-        this.cashPerHour = cashPerHour1;
+        this.password = password;
+        this.name = name;
+        this.surname = surname;
+        this.cashPerHour = cashPerHour;
         this.minNumberOfHours = minNumberOfHours;
-        this.supervisor = supervisor;
-        this.expirationDate = expirationDate;
         this.department = department;
+        this.supervisor = supervisor;
+        GregorianCalendar data = new GregorianCalendar(year, month, day);
+        this.expirationDate = data.getTime();
     }
-
-    public PartTimeWorker(int ID_PartTimeWorker, String login, String password, String name, String surname, int cashPerHour, int minNumberOfHours, Worker supervisor, Date expirationDate, Department department) {
+    public PartTimeWorker(String login, String password, String name, String surname, int cashPerHour, int minNumberOfHours, Department department, FullTimeWorker supervisor, int year, int month, int day) {
+//        String login1 = name.charAt(0) + surname;
+        this.login = login;
+        this.password = password;
+        this.name = name;
+        this.surname = surname;
+        this.cashPerHour = cashPerHour;
+        this.minNumberOfHours = minNumberOfHours;
+        this.department = department;
+        this.supervisor = supervisor;
+        GregorianCalendar data = new GregorianCalendar(year, month, day);
+        this.expirationDate = data.getTime();
+    }
+    public PartTimeWorker(int ID_PartTimeWorker, String login, String password, String name, String surname, int cashPerHour, int minNumberOfHours, FullTimeWorker supervisor,  int year, int month, int day, Department department) {
         this.ID_PartTimeWorker = ID_PartTimeWorker;
         this.login = login;
         this.password = password;
@@ -71,7 +85,8 @@ public class PartTimeWorker extends Worker {
         this.cashPerHour = cashPerHour;
         this.minNumberOfHours = minNumberOfHours;
         this.supervisor = supervisor;
-        this.expirationDate = expirationDate;
+        GregorianCalendar data = new GregorianCalendar(year, month, day);
+        this.expirationDate = data.getTime();
         this.department = department;
     }
 }
