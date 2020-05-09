@@ -2,6 +2,8 @@ package database;
 import javax.persistence.*;
 import lombok.Data;
 
+import java.util.Set;
+
 
 /**
  * This class represents worker shift
@@ -21,10 +23,11 @@ public class Department {
     }
 
     public Department(long ID_Department, String department) {
-        this.ID_Department = ID_Department;
         Department = department;
     }
-
+    public Department( String department) {
+        Department = department;
+    }
     public long getID_Department() {
         return ID_Department;
     }
