@@ -7,16 +7,12 @@ public class LoadingData {
 
     public static void main(String[] args){
         System.out.print("Hello World\n");
-
-        save_to_db();
-
+        loadData();
         entityManagerFactory.close();
-
         System.out.print("Bye World");
-
     }
 
-    private static void save_to_db()
+    private static void loadData()
     {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         entityManager.getTransaction().begin();

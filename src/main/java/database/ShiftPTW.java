@@ -14,25 +14,25 @@ import lombok.Setter;
  */
 @Entity
 @Data
-public class ShiftFTW implements Cloneable{
+public class ShiftPTW implements Cloneable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID_FTWorker;
+    private long ID_PTWorker;
     @Getter
     @Setter
     @ManyToOne
-    private FullTimeWorker worker;
+    private PartTimeWorker worker;
     @Getter @Setter
     private LocalDateTime shiftStart;
     @Getter @Setter
     private LocalDateTime shiftEnd;
     @Getter @Setter
     private long noOfHours;
-    public FullTimeWorker getWorker() {
+    public PartTimeWorker getWorker() {
         return worker;
     }
 
-    public void setWorker(FullTimeWorker worker) {
+    public void setWorker(PartTimeWorker worker) {
         this.worker = worker;
     }
 

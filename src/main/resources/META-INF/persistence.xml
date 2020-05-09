@@ -3,11 +3,14 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
     <persistence-unit name="DB" transaction-type="RESOURCE_LOCAL">
-
         <class>database.ShiftFTW</class>
         <class>database.FullTimeWorker</class>
-        <class>database.LoadingData</class>
+        <class>database.Test</class>
+        <class>database.PartTimeWorker</class>
+        <class>database.ShiftPTW</class>
+        <class>database.Department</class>
         <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
             <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
             <property name="javax.persistence.jdbc.url"
