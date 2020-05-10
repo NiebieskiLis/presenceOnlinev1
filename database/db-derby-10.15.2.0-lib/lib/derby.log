@@ -1,0 +1,25 @@
+Sun May 10 15:07:13 CEST 2020 : Serwer sieciowy Apache Derby - 10.15.2.0 - (1873585) uruchomiony i gotowy do zaakceptowania po³¹czeñ na porcie 1527 w {3} 
+----------------------------------------------------------------
+Sun May 10 15:07:26 CEST 2020:
+ Uruchamianie wersji The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585) systemu Derby: instancja a816c00e-0171-feb2-57f4-000015512b16
+w katalogu bazy danych C:\Users\Aleksandra\IdeaProjects\presence_online\database\db-derby-10.15.2.0-lib\lib\BazaPracownikow jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
+
+java.vendor=Oracle Corporation
+user.dir=C:\Users\Aleksandra\IdeaProjects\presence_online\database\db-derby-10.15.2.0-lib\lib
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\Aleksandra\IdeaProjects\presence_online\database\db-derby-10.15.2.0-lib\lib
+Uruchomiono program ³aduj¹cy klasê bazy danych - derby.database.classpath=''
+----------------------------------------------------------------
+Sun May 10 15:16:39 CEST 2020:
+ Uruchamianie wersji The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585) systemu Derby: instancja 374fc0db-0171-feb2-57f4-000015512b16
+w katalogu bazy danych C:\Users\Aleksandra\IdeaProjects\presence_online\database\db-derby-10.15.2.0-lib\lib\pt_lab jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
+
+java.vendor=Oracle Corporation
+user.dir=C:\Users\Aleksandra\IdeaProjects\presence_online\database\db-derby-10.15.2.0-lib\lib
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\Aleksandra\IdeaProjects\presence_online\database\db-derby-10.15.2.0-lib\lib
+Uruchomiono program ³aduj¹cy klasê bazy danych - derby.database.classpath=''

@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="">
+    <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="All of the Interface is working proprely and is secured :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/AccountantPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AccountantPlatform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/LoadingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/LoadingData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/PartTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/PartTimeWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/CreateData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/CreateData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/Department.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/FullTimeWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/FullTimeWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/LoadingData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/LoadingData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/PartTimeWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/PartTimeWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/ShiftPTW.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/ShiftPTW.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +59,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/../../.." value="devel" />
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="devel" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,17 +68,61 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1b0Jg37AOguYMdas14RU1t3JhSV" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="derby" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/db-derby-10.15.2.0-lib/lib/derbynet.jar!/" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.TCPClient">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aleksandra\IdeaProjects\presence_online\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.LoadingData">
+    <configuration name="DerbyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="database.DerbyTest" />
+      <module name="PresenceOnline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoadingData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="database.LoadingData" />
+      <module name="PresenceOnline" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TCPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TCP.TCPClient" />
       <module name="PresenceOnline" />
@@ -77,8 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TCPClient" />
+        <item itemvalue="Application.LoadingData" />
         <item itemvalue="Application.TCPServer" />
+        <item itemvalue="Application.TCPClient" />
+        <item itemvalue="Application.DerbyTest" />
+        <item itemvalue="Application.DerbyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -92,6 +169,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587763667468</updated>
+      <workItem from="1588926196203" duration="185000" />
+      <workItem from="1588926510698" duration="1390000" />
+      <workItem from="1588935942770" duration="1385000" />
+      <workItem from="1588947043999" duration="8185000" />
+      <workItem from="1588955586180" duration="1600000" />
+      <workItem from="1588957247018" duration="272000" />
+      <workItem from="1588964116245" duration="3366000" />
+      <workItem from="1589024293358" duration="12853000" />
+      <workItem from="1589102594406" duration="5428000" />
+      <workItem from="1589108452410" duration="1294000" />
     </task>
     <task id="LOCAL-00001" summary="Added TCP Server">
       <created>1587766378644</created>
@@ -128,19 +215,116 @@
       <option name="project" value="LOCAL" />
       <updated>1587769985226</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed a derby database settings and added some of the entites">
+      <created>1588951485168</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588951485168</updated>
+    </task>
+    <task id="LOCAL-00007" summary="providing Changes after pipeline failed">
+      <created>1588952185539</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1588952185539</updated>
+    </task>
+    <task id="LOCAL-00008" summary="providing Changes after pipeline failed 2 try">
+      <created>1588952504716</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588952504716</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Removed Destroyed files">
+      <created>1588953049103</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588953049103</updated>
+    </task>
+    <task id="LOCAL-00010" summary="All Databases should be properly configured">
+      <created>1588957041679</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588957041682</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fully functioning Database and data entites according to our schema">
+      <created>1589025843607</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589025843607</updated>
+    </task>
+    <task id="LOCAL-00012" summary="All of the Interface is working proprely and is secured :)">
+      <created>1589125375974</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589125375974</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added TCP package" />
     <MESSAGE value="Added TCP Server" />
     <MESSAGE value="Added javadoc to file" />
     <MESSAGE value="Added again TCP Client" />
     <MESSAGE value="Deleted TCP Client" />
     <MESSAGE value="Added TCP Server Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TCP Server Class" />
+    <MESSAGE value="changed a derby database settings and added some of the entites" />
+    <MESSAGE value="providing Changes after pipeline failed" />
+    <MESSAGE value="providing Changes after pipeline failed 2 try" />
+    <MESSAGE value="Removed Destroyed files" />
+    <MESSAGE value="All Databases should be properly configured" />
+    <MESSAGE value="Fully functioning Database and data entites according to our schema" />
+    <MESSAGE value="All of the Interface is working proprely and is secured :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="All of the Interface is working proprely and is secured :)" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="668" y="304" key="#Assign_Data_Sources" timestamp="1588948299533">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="668" y="304" key="#Assign_Data_Sources/0.0.1536.824@0.0.1536.824" timestamp="1588948299533" />
+    <state x="249" y="0" key="#Project_Structure" timestamp="1588926247211">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1588926247211" />
+    <state x="258" y="321" key="#SQL_Dialects" timestamp="1589063118874">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="206" y="254" key="#SQL_Dialects/0.0.1536.824@0.0.1536.824" timestamp="1589033150482" />
+    <state x="258" y="321" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1589063118874" />
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1589035957050">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="167" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589035957050" />
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588927401330">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1588927401330" />
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser" timestamp="1589035233205">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1589035233205" />
     <state x="942" y="241" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1587937232935">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -150,33 +334,116 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="424" y="9" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587770210685" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1587994733363">
+    <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1588935641436">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587994733363" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1587994733362">
+    <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588935641436" />
+    <state width="1493" height="124" key="GridCell.Tab.0.bottom" timestamp="1589131477236">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587994733362" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1587994733362">
+    <state width="1493" height="124" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589131477236" />
+    <state width="1877" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
+    <state width="1493" height="124" key="GridCell.Tab.0.center" timestamp="1589131477236">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587994733362" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1587994733362">
+    <state width="1493" height="124" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589131477236" />
+    <state width="1877" height="382" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
+    <state width="1493" height="124" key="GridCell.Tab.0.left" timestamp="1589131477236">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587994733362" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1587770233891">
+    <state width="1493" height="124" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589131477236" />
+    <state width="1877" height="382" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
+    <state width="1493" height="124" key="GridCell.Tab.0.right" timestamp="1589131477236">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587770233891" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587764315674">
+    <state width="1493" height="124" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589131477236" />
+    <state width="1877" height="382" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
+    <state width="1493" height="350" key="GridCell.Tab.1.bottom" timestamp="1589118759983">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587764315674" />
-    <state x="476" y="204" key="git4idea.merge.GitPullDialog" timestamp="1587769667258">
+    <state width="1493" height="350" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589118759983" />
+    <state width="1877" height="382" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
+    <state width="1493" height="350" key="GridCell.Tab.1.center" timestamp="1589118759982">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1587769667258" />
+    <state width="1493" height="350" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589118759982" />
+    <state width="1877" height="382" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
+    <state width="1493" height="350" key="GridCell.Tab.1.left" timestamp="1589118759982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="350" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589118759982" />
+    <state width="1877" height="382" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
+    <state width="1493" height="350" key="GridCell.Tab.1.right" timestamp="1589118759982">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="350" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589118759982" />
+    <state width="1877" height="382" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
+    <state width="237" height="577" key="HiddenNamespacesPopup" timestamp="1589106448276">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="189" height="457" key="HiddenNamespacesPopup/0.0.1536.824@0.0.1536.824" timestamp="1588965932883" />
+    <state width="237" height="577" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1589106448276" />
+    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1589103054607">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589103054607" />
+    <state x="598" y="108" key="Maven.ArtifactSearchDialog" timestamp="1588955415955">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="598" y="108" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1588955415955" />
+    <state x="520" y="0" key="SettingsEditor" timestamp="1589108076598">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="416" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588954444910" />
+    <state x="520" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589108076598" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1589125391837">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589125391837" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588951759672">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1588951759672" />
+    <state x="476" y="204" key="git4idea.merge.GitPullDialog" timestamp="1588951774554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="476" y="204" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1588951774554" />
+    <state x="425" y="186" key="run.anything.popup" timestamp="1589122917417">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="186" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589122917417" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589122893786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589122893786" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/database/Worker.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/database/LoadingData.java</url>
+          <line>188</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/database/LoadingData.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/database/LoadingData.java</url>
+          <line>517</line>
+          <properties class="database.LoadingData" method="deleteFullTimeWorker">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
