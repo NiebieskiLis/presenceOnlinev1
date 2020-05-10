@@ -3,6 +3,7 @@ package database;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Scanner;
 import javax.persistence.*;
@@ -31,7 +32,7 @@ public class LoadingData {
         String element = "";
         String sesja = "1";
          while (sesja.equals("1")) {
-                System.out.println("What would you like to do? \n s - start shift \n e - end shift  \n c - close \n a - accounting platform \n d- delete worker");
+                System.out.println("What would you like to do? \n s - start shift \n e - end shift  \n c - close \n  a - add worker \n d- delete worker");
                 try {
                     BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
                     element = obj.readLine();
@@ -98,10 +99,30 @@ public class LoadingData {
                         System.out.println("You just closed your last shift !");
 
                         break;
+                        //NOT YET UPDATED
+//                    case "a":
+//                        if (isAccountant==1) {
+//                            AccountantPlatform test = new AccountantPlatform();
+//                            test.menu(entityManager);
+//                        }else {
+//                            System.out.print("You have no power here :/");
+//                        }
+//                        break;
                     case "a":
                         if (isAccountant==1) {
-                            AccountantPlatform test = new AccountantPlatform();
-                            test.menu(entityManager);
+                            System.out.println("Who would you like to add ? \n f - fulltime worker  \n p- part-time worker" );
+
+                            try {
+                                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                                element = obj.readLine();
+                            } catch (IOException e) {
+                                System.out.print("Unable to read character from file_type");
+                            }
+
+                            if (element.equals("p"))
+                                addPartTimeWorker(entityManager);
+                            else if (element.equals("f"))
+                                addFullTimeWorker(entityManager);;
                         }else {
                             System.out.print("You have no power here :/");
                         }
@@ -197,8 +218,9 @@ public class LoadingData {
         Query query = em.createQuery(queryString);
         List<PartTimeWorker> products = query.getResultList();
         for ( PartTimeWorker p : products) {
-            System.out.println(p.toString()+"\n please specify ID of worker ");
+            System.out.println(p.toString());
         }
+        System.out.println("please specify ID of worker \n ");
         String element ="";
         try {
             BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
@@ -220,6 +242,274 @@ public class LoadingData {
         //delete this full time worker
     }
 
+    /**
+     * Methods that add part time worker
+     * @param em
+     */
+    private static void addPartTimeWorker(EntityManager em){
+        //Show list of all part time worker
+       PartTimeWorker w = new PartTimeWorker();
+        System.out.println("Add worker password \n ");
+        String element = null ;
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            w.setPassword(obj.readLine());
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+
+        System.out.println("Add worker name \n ");
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            w.setName(obj.readLine());
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+
+        System.out.println("Add worker surname \n ");
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            w.setSurname(obj.readLine());
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+        w.createLogin();
+        System.out.println("How much will he earn? \n ");
+        int d =1 ;
+        boolean t = true;
+        while (t) {
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                try {
+                    d = Integer.parseInt(obj.readLine());
+                    t = false;
+                } catch (NumberFormatException nfe) {
+                    System.out.print("It is not a number !");
+                }
+
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+        }
+        w.setCashPerHour(d);
+
+        System.out.println("How much he needs to work per week? (between 0 and 40 in integer) \n ");
+        element = "1";
+         d =1 ;
+         t = true;
+        while (t) {
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                try {
+                    d = Integer.parseInt(obj.readLine());
+                    t = false;
+                } catch (NumberFormatException nfe) {
+                    System.out.print("It is not a number ! \n ");
+                }
+
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+        }
+        System.out.println("who is his supervisor? \n ");
+        w.setSupervisor(FullTimeWorker.chooseFullTimeWorker(em));
+
+        System.out.println("Expiraion date of his Agreement \n ");
+        int month =1 , year =2020 , day = 20;
+        t=true;
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            while(t){
+                System.out.println("year \n ");
+                try {
+                     year  = Integer.parseInt(obj.readLine());
+                    t = false;
+                } catch (NumberFormatException nfe) {
+                    System.out.print("It is not a number ! \n ");
+                }
+            }
+            System.out.println("month \n ");
+            t=true;
+            while(t){
+                System.out.println("month \n ");
+                try {
+                     month  = Integer.parseInt(obj.readLine());
+                     if (month > 0 & month<12)
+                        t = false;
+                } catch (NumberFormatException nfe) {
+                    System.out.print("It is not a number ! \n ");
+                }
+            }
+            System.out.println("day \n ");
+            t=true;
+            while(t){
+                System.out.println("day \n ");
+                try {
+                    month  = Integer.parseInt(obj.readLine());
+                    if (month > 0 & month<31)
+                        t = false;
+                } catch (NumberFormatException nfe) {
+                    System.out.print("It is not a number ! \n ");
+                }
+            }
+            GregorianCalendar data = new GregorianCalendar(year, month, day);
+            w.setExpirationDate(data.getTime());
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+        System.out.println("what is his department? \n ");
+        w.setDepartment(Department.chooseDepartment(em));
+        em.getTransaction().begin();
+        em.persist(w);
+        em.getTransaction().commit();
+        //delete this full time worker
+    }
+
+    /**
+     * Methods to add fulltime worker
+     * @param em
+     */
+    private static void addFullTimeWorker(EntityManager em){
+        //Show list of all part time worker
+        FullTimeWorker w = new FullTimeWorker();
+        System.out.println("Add worker password \n ");
+        String element = null ;
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            w.setPassword(obj.readLine());
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+
+        System.out.println("Add worker name \n ");
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            w.setName(obj.readLine());
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+
+        System.out.println("Add worker surname \n ");
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            w.setSurname(obj.readLine());
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+        w.createLogin();
+        System.out.println("How much will he earn? \n ");
+        int d =1 ;
+        boolean t = true;
+        while (t) {
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                try {
+                    d = Integer.parseInt(obj.readLine());
+                    t = false;
+                } catch (NumberFormatException nfe) {
+                    System.out.print("It is not a number !");
+                }
+
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+        }
+        w.setCashPerHour(d);
+
+        System.out.println("How much he gets of Paid leave ?? (between 0 and 40 in integer) \n ");
+        d =1 ;
+        t = true;
+        while (t) {
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                try {
+                    d = Integer.parseInt(obj.readLine());
+                    if (d >= 0 & d<= 40)
+                    t = false;
+                    else System.out.println("To much of paid leave !");
+                } catch (NumberFormatException nfe) {
+                    System.out.print("It is not a number ! \n ");
+                }
+
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+        }
+        w.setPaidLeave(d);
+        System.out.println("How much he gets of Child leave ?? (between 0 and 20 in integer) \n ");
+        d =1 ;
+        t = true;
+        while (t) {
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                try {
+                    d = Integer.parseInt(obj.readLine());
+                    if (d >= 0 & d<= 20)
+                        t = false;
+                    else System.out.println("To much of child leave !");
+                } catch (NumberFormatException nfe) {
+                    System.out.print("It is not a number ! \n ");
+                }
+
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+        }
+        System.out.print("Does he get any multisport ? \n y - yes n - no");
+        w.setChildCareLeave(d);
+        boolean b = true;
+        t = true;
+        while (t) {
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                    element = (obj.readLine());
+                    if (element.equals("y")){
+                        b = true;
+                    t = false;
+                     }
+                    else if (element.equals("n")) {
+                        b = false;
+                        t = false;
+                    }
+                        else System.out.println("Try once more !");
+
+
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+        }
+        w.setMultisport(b);
+        System.out.println("Does he get any health care ? \n y - yes n - no");
+
+        b = true;
+        t = true;
+        while (t) {
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                element = (obj.readLine());
+                if (element.equals("y")){
+                    b = true;
+                    t = false;
+                }
+                else if (element.equals("n")) {
+                    b = false;
+                    t = false;
+                }
+                else System.out.println("Try once more !");
+
+
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+        }
+        w.setMultisport(b);
+        System.out.println("what is his department? \n ");
+        w.setDepartment(Department.chooseDepartment(em));
+        em.getTransaction().begin();
+        em.persist(w);
+        em.getTransaction().commit();
+        //delete this full time worker
+    }
     /**
      * A method that permanently deletes Full Time Worker from  workers and Shifts
      * @author Aleksandra Rezetka
@@ -246,6 +536,17 @@ public class LoadingData {
             String queryString2 = "DELETE FROM ShiftFTW p WHERE p.worker = :worker";
             Query query2 = em.createQuery(queryString2);
             query2.setParameter("worker", w);
+            String queryString3 = "SELECT p from PartTimeWorker p WHERE p.supervisor = :worker";
+            Query query3 = em.createQuery(queryString3);
+            query3.setParameter("worker", w);
+
+            List<PartTimeWorker> products2 = query3.getResultList();
+
+            for (PartTimeWorker f: products2) {
+                em.getTransaction().begin();
+                f.setSupervisor((FullTimeWorker) logged);
+                em.getTransaction().commit();
+            }
             //delete this full time worker
             em.getTransaction().begin();
             em.remove(w);
@@ -293,6 +594,13 @@ public class LoadingData {
         }
 
     }
+
+    /**
+     * Checks if logged person is an accountant
+     * @param login
+     * @param em
+     * @return
+     */
     private static int ifAccountantFt(String login, EntityManager em) {
         String queryString = "SELECT p FROM FullTimeWorker p WHERE p.login LIKE :login";
         String queryString2 = "SELECT p FROM Department p";
@@ -306,6 +614,13 @@ public class LoadingData {
         }
         else return 0;
     }
+
+    /**
+     * Checks if logged person is an full time worker
+     * @param login
+     * @param em
+     * @return
+     */
     private static boolean isFulltime(String login, EntityManager em){
         String queryString = "SELECT p FROM FullTimeWorker p WHERE p.login LIKE :login";
         Query query = em.createQuery(queryString);

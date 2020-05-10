@@ -10,6 +10,7 @@ import java.util.GregorianCalendar;
 
 @Data
 @Entity
+@Getter @Setter
 public class PartTimeWorker extends Worker {
 //    @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,12 +25,9 @@ public class PartTimeWorker extends Worker {
 //    private String surname;
 //    @Getter @Setter
 //    private int cashPerHour;
-    @Getter @Setter
     private int minNumberOfHours;
-    @Getter @Setter
     @ManyToOne
     private FullTimeWorker supervisor;
-    @Getter @Setter
     private Date expirationDate;
     @ManyToOne(cascade = {CascadeType.ALL})
     private Department department;
@@ -51,7 +49,7 @@ public class PartTimeWorker extends Worker {
 
     public PartTimeWorker(String password, String name, String surname, int cashPerHour, int minNumberOfHours, Department department, FullTimeWorker supervisor, int year, int month, int day) {
         String login1 = name.charAt(0) + surname;
-        this.login = login;
+        this.login = login1;
         this.password = password;
         this.name = name;
         this.surname = surname;
@@ -63,7 +61,6 @@ public class PartTimeWorker extends Worker {
         this.expirationDate = data.getTime();
     }
     public PartTimeWorker(String login, String password, String name, String surname, int cashPerHour, int minNumberOfHours, Department department, FullTimeWorker supervisor, int year, int month, int day) {
-//        String login1 = name.charAt(0) + surname;
         this.login = login;
         this.password = password;
         this.name = name;
@@ -88,4 +85,9 @@ public class PartTimeWorker extends Worker {
         this.expirationDate = data.getTime();
         this.department = department;
     }
+    @Override
+    public String toString() {
+        return getLogin()+ " "+getID() +" "+getName() +" "+ getSurname();
+    }
+
 }

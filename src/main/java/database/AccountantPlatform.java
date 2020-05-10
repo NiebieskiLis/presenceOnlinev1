@@ -16,7 +16,7 @@ import static java.nio.channels.Channels.newOutputStream;
  * @version 17/04/2020/v1
  * @author Aleksandra Rezetka
  *This Class is representation of prototype fo Accounting Platform where Accounting can take a look to the workers lists
- * @update 10.05 adapted for database usage
+ *NOT YET UPDATED
  */
 public class AccountantPlatform {
     /**

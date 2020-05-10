@@ -6,6 +6,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.Data;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
+
 /**
  * A full time worker is a worker that is able to get any benefits from the company as well as to get paid leave
  * @version 09/05/2020/v1
@@ -66,5 +71,33 @@ public class FullTimeWorker extends Worker {
 
     public FullTimeWorker() {
 
+    }
+    @Override
+    public String toString() {
+        return getLogin()+ " "+getID() +" "+getName() +" "+ getSurname();
+    }
+    public static FullTimeWorker chooseFullTimeWorker(EntityManager em){
+        String element = "";
+        FullTimeWorker x =null;
+        while (x == null) {
+            System.out.println("who is his supervisor? \n ");
+            String queryString = "SELECT p FROM FullTimeWorker p ";
+            Query query = em.createQuery(queryString);
+            List<FullTimeWorker> products = query.getResultList();
+            for (FullTimeWorker p : products) {
+                System.out.println(p.toString());
+            }
+            System.out.println("Please specify ID \n ");
+
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                element = obj.readLine();
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+            x = em.find(FullTimeWorker.class, Long.parseLong(element));
+
+        }
+        return x;
     }
 }

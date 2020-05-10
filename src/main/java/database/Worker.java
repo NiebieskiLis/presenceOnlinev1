@@ -129,4 +129,7 @@ public abstract class Worker implements Comparable<Worker> , Cloneable , Seriali
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
+    public void createLogin(){
+        login = name.charAt(0) + surname;
+    }
 }
