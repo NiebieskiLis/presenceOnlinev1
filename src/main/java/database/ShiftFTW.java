@@ -21,18 +21,18 @@ public class ShiftFTW implements Cloneable{
     @Getter
     @Setter
     @ManyToOne
-    private FullTimeWorker worker;
+    private Worker worker;
     @Getter @Setter
     private LocalDateTime shiftStart;
     @Getter @Setter
     private LocalDateTime shiftEnd;
     @Getter @Setter
     private long noOfHours;
-    public FullTimeWorker getWorker() {
+    public Worker getWorker() {
         return worker;
     }
 
-    public void setWorker(FullTimeWorker worker) {
+    public void setWorker(Worker worker) {
         this.worker = worker;
     }
 
@@ -60,10 +60,20 @@ public class ShiftFTW implements Cloneable{
         this.noOfHours = noOfHours;
     }
 
+    public  ShiftFTW(){
+
+    }
     /**
      * Method that starts shift
      */
 
+    public ShiftFTW(Worker worker) {
+        this.worker = (FullTimeWorker) worker;
+        this.noOfHours = 0;
+        this.shiftStart = null;
+        this.shiftEnd = null;
+
+    }
     public void startShiftFTW(){
         setShiftStart(LocalDateTime.now());
         System.out.println("shift.Shift was started");

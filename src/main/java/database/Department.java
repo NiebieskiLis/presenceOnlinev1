@@ -1,18 +1,25 @@
 package database;
 import javax.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.Set;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
 
 
 /**
- * This class represents worker shift
+ * This class represents Departments in the company
  * it has a data about the start and end time as well as sum of hours spend in work
  * @version 08/05/2020/v2
  * @author Aleksandra Rezetka
  */
 @Entity
 @Data
+@Getter
+@Setter
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,19 +35,28 @@ public class Department {
     public Department( String department) {
         Department = department;
     }
-    public long getID_Department() {
-        return ID_Department;
-    }
+    public static Department chooseDepartment(EntityManager em){
+        String element = "";
+        Department x =null;
+        while (x == null) {
+            System.out.println("Which Department? \n ");
+            String queryString = "SELECT p FROM Department p ";
+            Query query = em.createQuery(queryString);
+            List<Department> products = query.getResultList();
+            for (Department p : products) {
+                System.out.println(p.toString());
+            }
+            System.out.println("Please specify ID \n ");
 
-    public void setID_Department(long ID_Department) {
-        this.ID_Department = ID_Department;
-    }
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                element = obj.readLine();
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+            x = em.find(Department.class, Long.parseLong(element));
 
-    public String getDepartment() {
-        return Department;
-    }
-
-    public void setDepartment(String department) {
-        Department = department;
+        }
+        return x;
     }
 }

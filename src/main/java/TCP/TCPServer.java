@@ -1,7 +1,8 @@
 package TCP;
+import database.CreateData;
 import workers.CreateWorker;
-import workers.Worker;
-import workers.WorkersList;
+import database.Worker;
+import database.WorkersList;
 import java.io.*;
 import java.net.*;
 import java.util.List;
@@ -43,13 +44,13 @@ public class TCPServer {
         }
     }
     public static void main(String[] args){
-        CreateWorker cr = new CreateWorker();
-        String fileName = "Data\\FT1.json";
-        List<Worker> workers = cr.createFullTimeWorker(fileName);
-        WorkersList w = new WorkersList();
-        w.setWorkers(workers);
-        TCPServer server = new TCPServer();
-        server.start(6666);
-        System.out.print("Server was created");
+//        CreateData cr = new CreateData();
+//        String fileName = "Data\\FT1.json";
+//        List<Worker> workers = cr.createFullTimeWorker(fileName);
+//        WorkersList w = new WorkersList();
+//        w.setWorkers(workers);
+//        TCPServer server = new TCPServer();
+//        server.start(6666);
+//        System.out.print("Server was created");
     }
 }

@@ -1,7 +1,7 @@
 package thread;
 
-import workers.Worker;
-import workers.WorkersList;
+import database.Worker;
+import database.WorkersList;
 
 import java.util.List;
 

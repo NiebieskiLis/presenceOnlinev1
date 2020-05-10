@@ -1,12 +1,15 @@
 package database;
 
-import workers.Worker;
-
 import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.Data;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
 
 /**
  * A full time worker is a worker that is able to get any benefits from the company as well as to get paid leave
@@ -15,34 +18,19 @@ import lombok.Data;
  */
 @Entity
 @Data
+@Getter @Setter
 public class FullTimeWorker extends Worker {
-    @Id
-    @Getter
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID_FullTimeWorker;
-    @Getter @Setter
-    private String login;
-    @Getter @Setter
-    private String password;
-    @Getter @Setter
-    private String name;
-    @Getter @Setter
-    private String surname;
-    @Getter @Setter
-    private int cashPerHour;
-    @Getter @Setter
+
+
     private int paidLeave;
-    @Getter @Setter
     private boolean multisport;
-    @Getter @Setter
     private boolean healthcareLeave;
-    @Getter @Setter
     private int childCareLeave;
     @ManyToOne(cascade = {CascadeType.ALL})
     private Department department;
 
     public FullTimeWorker(long ID_FullTimeWorker, String login, String password, String name, String surname, int cashPerHour, int paidLeave, boolean multisport, boolean healthcareLeave, int childCareLeave, Department department) {
-        this.ID_FullTimeWorker = ID_FullTimeWorker;
+        this.ID = ID_FullTimeWorker;
         this.login = login;
         this.password = password;
         this.name = name;
@@ -80,104 +68,36 @@ public class FullTimeWorker extends Worker {
         this.childCareLeave = childCareLeave;
         this.department = department;
     }
-    public FullTimeWorker(){
+
+    public FullTimeWorker() {
 
     }
-    public long getID_FullTimeWorker() {
-        return ID_FullTimeWorker;
-    }
-
-    public void setID_FullTimeWorker(long ID_FullTimeWorker) {
-        this.ID_FullTimeWorker = ID_FullTimeWorker;
-    }
-
     @Override
-    public String getLogin() {
-        return login;
+    public String toString() {
+        return getLogin()+ " "+getID() +" "+getName() +" "+ getSurname();
     }
+    public static FullTimeWorker chooseFullTimeWorker(EntityManager em){
+        String element = "";
+        FullTimeWorker x =null;
+        while (x == null) {
+            System.out.println("who is his supervisor? \n ");
+            String queryString = "SELECT p FROM FullTimeWorker p ";
+            Query query = em.createQuery(queryString);
+            List<FullTimeWorker> products = query.getResultList();
+            for (FullTimeWorker p : products) {
+                System.out.println(p.toString());
+            }
+            System.out.println("Please specify ID \n ");
 
-    @Override
-    public void setLogin(String login) {
-        this.login = login;
-    }
+            try {
+                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                element = obj.readLine();
+            } catch (IOException e) {
+                System.out.print("Unable to read character from file_type");
+            }
+            x = em.find(FullTimeWorker.class, Long.parseLong(element));
 
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    @Override
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String getSurname() {
-        return surname;
-    }
-
-    @Override
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    @Override
-    public int getCashPerHour() {
-        return cashPerHour;
-    }
-
-    @Override
-    public void setCashPerHour(int cashPerHour) {
-        this.cashPerHour = cashPerHour;
-    }
-
-    public int getPaidLeave() {
-        return paidLeave;
-    }
-
-    public void setPaidLeave(int paidLeave) {
-        this.paidLeave = paidLeave;
-    }
-
-    public boolean isMultisport() {
-        return multisport;
-    }
-
-    public void setMultisport(boolean multisport) {
-        this.multisport = multisport;
-    }
-
-    public boolean isHealthcareLeave() {
-        return healthcareLeave;
-    }
-
-    public void setHealthcareLeave(boolean healthcareLeave) {
-        this.healthcareLeave = healthcareLeave;
-    }
-
-    public int getChildCareLeave() {
-        return childCareLeave;
-    }
-
-    public void setChildCareLeave(int childCareLeave) {
-        this.childCareLeave = childCareLeave;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
+        }
+        return x;
     }
 }
