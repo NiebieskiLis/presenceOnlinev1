@@ -12,12 +12,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
 
+
 /**
  * Class which is responsible for loading the data to the databse and performing some operations
  * @author Maciej Adamczyk
  * @version 9.05.2020
  */
 public class LoadingData {
+
     private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("DB");
 
     /**
@@ -55,17 +57,14 @@ public class LoadingData {
         while (logging == false) {
             System.out.println("Login: \n");
             String Login = scan.nextLine();
-            System.out.println("Password \n");
+            System.out.println("Password: \n");
             String Password = scan.nextLine();
             logging = loggin_in(Login, Password, entityManager);
-            /*
-            is_fulltime = is_fulltime(Login, conn);
-            if (is_fulltime == true)
-                is_accountant = if_accountant_ft(Login, conn);
-            else
-                is_accountant = if_accountant_pt(Login, conn);
 
-             */
+            is_fulltime = is_fulltime(Login, entityManager);
+            if (is_fulltime == true)
+                is_accountant = if_accountant_ft(Login, entityManager);
+
         }
         /*
         System.out.println("Aby rozpoczac sesje, kliknij 1: \n");
@@ -128,7 +127,7 @@ public class LoadingData {
     private static boolean loggin_in(String login, String log_password, EntityManager em){
         String queryString = "SELECT p FROM FullTimeWorker p WHERE p.login LIKE :login";
         Query query = em.createQuery(queryString);
-        query.setParameter("login", "login");
+        query.setParameter("login", login);
         List<FullTimeWorker> products = query.getResultList();
         if (products.size() > 0) {
             if(products.get(0).getPassword().equals(log_password)) {
@@ -140,7 +139,7 @@ public class LoadingData {
         else {
             String queryString2 = "SELECT p FROM PartTimeWorker p WHERE p.login LIKE :login";
             Query query2 = em.createQuery(queryString2);
-            query2.setParameter("login", "login");
+            query2.setParameter("login", login);
             List<PartTimeWorker> products2 = query2.getResultList();
             if (products2.size() > 0) {
                 if(products2.get(0).getPassword().equals(log_password)) {
@@ -164,71 +163,34 @@ public class LoadingData {
      * @return
      * @throws SQLException
      */
-    private static int if_accountant_ft(String login, Connection conn) throws SQLException {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        Statement stmt = conn.createStatement();
-        String query = "SELECT department FROM fulltimeworker WHERE login LIKE " + login;
-        ResultSet result = stmt.executeQuery(query);
-        if (result.getString("department").equals("6"))
+    private static int if_accountant_ft(String login, EntityManager em) {
+        String queryString = "SELECT p FROM FullTimeWorker p WHERE p.login LIKE :login";
+        String queryString2 = "SELECT p FROM Department p";
+        Query query = em.createQuery(queryString);
+        Query query2 = em.createQuery(queryString2);;
+        List<FullTimeWorker> products = query.getResultList();
+        List<Department> products2 = query2.getResultList();
+        if (products.get(1).getDepartment() == products2.get(6)) {
             return 1;
-        else
-            return 0;
-    }
-
-    private static boolean is_fulltime(String login, Connection conn) throws SQLException {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        Statement stmt = conn.createStatement();
-        String query = "SELECT department FROM fulltimeworker WHERE login LIKE " + login;
-        ResultSet result = stmt.executeQuery(query);
-        if (result.getString("department").equals("6"))
-            return true;
-        else
-            return false;
-    }
-
-
-    /**
-     * Function which checks if part time worker is an accountant
-     * @param login
-     * @param conn
-     * @return
-     * @throws SQLException
-     */
-    private static int if_accountant_pt(String login, Connection conn) throws SQLException {
-        EntityManager entityManager = entityManagerFactory.createEntityManager();
-        Statement stmt = conn.createStatement();
-        String query = "SELECT department FROM fulltimeworker WHERE surname LIKE " + login;
-        ResultSet result = stmt.executeQuery(query);
-        if (result.getString("department").equals("6"))
-            return 1;
-        else
-            return 0;
-    }
-
-    /**
-     * Function which allows updating a record in the database
-     * @param conn
-     */
-    private static void update_data(Connection conn) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Which table you want to update: \n");
-        String table = scan.nextLine();
-        System.out.println("What is the column?: \n");
-        String column = scan.nextLine();
-        System.out.println("What is the new value?: \n");
-        String value = scan.nextLine();
-        System.out.println("What is the condition?: \n");
-        String condition = scan.nextLine();
-
-        try {
-            Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("UPDATE " + table + " SET " + column + " = " + value + " WHERE " + condition);
         }
-        catch (SQLException sqlExcept)
-        {
-            sqlExcept.printStackTrace();
-        }
+        else return 0;
     }
+
+    private static boolean is_fulltime(String login, EntityManager em){
+        String queryString = "SELECT p FROM FullTimeWorker p WHERE p.login LIKE :login";
+        Query query = em.createQuery(queryString);
+        query.setParameter("login", "login");
+        List<FullTimeWorker> products = query.getResultList();
+        if (products.size() > 0) {
+            if (products.get(0).getLogin().equals(login)) {
+                return true;
+            } else
+                return false;
+        }
+        return false;
+    }
+
+
 
     /**
      * Function which allows deleting a record from the databse
