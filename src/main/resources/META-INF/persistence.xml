@@ -5,6 +5,7 @@
     <persistence-unit name="DB" transaction-type="RESOURCE_LOCAL">
         <class>database.ShiftFTW</class>
         <class>database.FullTimeWorker</class>
+        <class>database.Worker</class>
         <class>database.Test</class>
         <class>database.PartTimeWorker</class>
         <class>database.ShiftPTW</class>

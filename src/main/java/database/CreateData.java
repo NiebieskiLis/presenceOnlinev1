@@ -7,6 +7,7 @@ import org.json.simple.parser.ParseException;
 import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -29,39 +30,7 @@ public class CreateData  {
     private static String dbURL = "jdbc:derby://localhost:1527/BazaPracownikow;create=true";
     private static Connection conn = null;
     private static Statement stmt = null;
-    private static void createConnection()
-    {
-        try
-        {
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
-            //Get a connection
-            conn = DriverManager.getConnection(dbURL);
-        }
-        catch (Exception except)
-        {
-            except.printStackTrace();
-        }
-    }
-    private static void shutdown()
-    {
-        try
-        {
-            if (stmt != null)
-            {
-                stmt.close();
-            }
-            if (conn != null)
-            {
-                DriverManager.getConnection(dbURL + ";shutdown=false");
-                conn.close();
-            }
-        }
-        catch (SQLException sqlExcept)
-        {
 
-        }
-
-    }
 
     /**
      * It is a class that adds data to the department table with the connection of entity manager
@@ -104,26 +73,10 @@ public class CreateData  {
      * @param entityManager
      */
     public void createFullTimeWorker(String filename, EntityManager entityManager){
-        List<Department> departments = new ArrayList<>();
-        String tableName = " department ";
-        createConnection();
-        try
-        {
-            stmt = conn.createStatement();
-            ResultSet results = stmt.executeQuery("select * from " + tableName);
-            while(results.next())
-            {
-                int id = results.getInt(1);
-                String dep = results.getString(2);
-                departments.add(new Department(id,dep));
-            }
-            results.close();
-            stmt.close();
-        }
-        catch (SQLException sqlExcept)
-        {
-            sqlExcept.printStackTrace();
-        }
+        List<Department> departments;
+        String queryString = "SELECT p FROM Department p";
+        Query query = entityManager.createQuery(queryString);
+        departments = query.getResultList();
 
         String line = null;
         String password;
@@ -170,56 +123,14 @@ public class CreateData  {
      */
     public void createPartTimeWorker(String filename , EntityManager entityManager ){
         String line = null;
-        List<Department> departments = new ArrayList<>();
-        String tableName = " department ";
-        List<FullTimeWorker> fulltime = new ArrayList<>();
-        String tableName2 = " fulltimeworker ";
-        createConnection();
-        try
-        {
-            stmt = conn.createStatement();
-            ResultSet results = stmt.executeQuery("select * from " + tableName);
-            while(results.next())
-            {
-                int id = results.getInt(1);
-                String dep = results.getString(2);
-                departments.add(new Department(id,dep));
-            }
-            results.close();
-            stmt.close();
-        }
-        catch (SQLException sqlExcept)
-        {
-            sqlExcept.printStackTrace();
-        }
-        try
-        {
-            stmt = conn.createStatement();
-            ResultSet results = stmt.executeQuery("select * from " + tableName2);
-            while(results.next())
-
-            {
-                 long ID_FullTimeWorker=results.getLong(1);
-                 String login=results.getString(5);
-                 String password=results.getString(9);
-                 String name=results.getString(7);
-                 String surname=results.getString(10);
-                 int cashPerHour=results.getInt(2);
-                 int paidLeave=results.getInt(8);
-                 boolean multisport = results.getBoolean(6);
-                 boolean healthcareLeave=results.getBoolean(4);
-                 int childCareLeave =results.getInt(3);
-                 Department department=departments.get(results.getInt(11)-1);
-                fulltime.add(new FullTimeWorker( ID_FullTimeWorker,  login,  password,  name,  surname,  cashPerHour,  paidLeave,  multisport,  healthcareLeave,  childCareLeave,  department));
-
-            }
-            results.close();
-            stmt.close();
-        }
-        catch (SQLException sqlExcept)
-        {
-            sqlExcept.printStackTrace();
-        }
+        List<Department> departments ;
+        List<FullTimeWorker> fulltime ;
+        String queryString = "SELECT p FROM Department p";
+        Query query = entityManager.createQuery(queryString);
+        departments = query.getResultList();
+        String queryString2 = "SELECT p FROM FullTimeWorker p";
+        Query query2 = entityManager.createQuery(queryString2);
+        fulltime = query2.getResultList();
         String password;
         JSONObject obj;
         ReadWriteLock myLock = new ReentrantReadWriteLock();

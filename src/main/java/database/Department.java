@@ -1,18 +1,21 @@
 package database;
 import javax.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.Set;
 
 
 /**
- * This class represents worker shift
+ * This class represents Departments in the company
  * it has a data about the start and end time as well as sum of hours spend in work
  * @version 08/05/2020/v2
  * @author Aleksandra Rezetka
  */
 @Entity
 @Data
+@Getter
+@Setter
 public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,21 +29,6 @@ public class Department {
         Department = department;
     }
     public Department( String department) {
-        Department = department;
-    }
-    public long getID_Department() {
-        return ID_Department;
-    }
-
-    public void setID_Department(long ID_Department) {
-        this.ID_Department = ID_Department;
-    }
-
-    public String getDepartment() {
-        return Department;
-    }
-
-    public void setDepartment(String department) {
         Department = department;
     }
 }

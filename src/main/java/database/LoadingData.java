@@ -1,16 +1,13 @@
 package database;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import javax.persistence.*;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.ResultSet;
+
 
 
 /**
@@ -22,80 +19,155 @@ public class LoadingData {
 
     private static EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("DB");
 
+    /** A main menu that exists show all of the possibilities that where described in first task
+     * @author Aleksandra Rezetka
+     * @param entityManager
+     * @param logged
+     * @param isAccountant
+     * @param isFulltime
+     */
+    public static void mainMenu(EntityManager entityManager , Worker logged , int isAccountant , boolean isFulltime){
+        System.out.println("Session is started: \n");
+        String element = "";
+        String sesja = "1";
+         while (sesja.equals("1")) {
+                System.out.println("What would you like to do? \n s - start shift \n e - end shift  \n c - close \n a - accounting platform \n d- delete worker");
+                try {
+                    BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                    element = obj.readLine();
+                } catch (IOException e) {
+                    System.out.print("Unable to read character from file_type");
+                }
+                switch (element) {
+                    case "s":
+                        if(isFulltime)
+                        {
+                            //Transaction example
+                            ShiftFTW s = new ShiftFTW(logged);
+                            s.startShiftFTW();
+                            EntityTransaction tx = entityManager.getTransaction();
+                            tx.begin();
+                            entityManager.persist(s);
+                            tx.commit();
+                        }
+                        else
+                        {
+                            //A shift for part time worker
+                            ShiftPTW p = new ShiftPTW(logged);
+                            p.startShiftPTW();
+                            EntityTransaction tx = entityManager.getTransaction();
+                            tx.begin();
+                            entityManager.persist(p);
+                            tx.commit();
+                        }
+                        System.out.println("You just started your last shift !");
+                        break;
+                    case "e":
+                        if(isFulltime)
+                        {
+                            //Query with parmeter
+                            String queryString = "SELECT p FROM ShiftFTW p WHERE p.worker = :login AND p.shiftEnd is null AND p.shiftStart is not null ORDER BY p.shiftStart DESC ";
+                            Query query = entityManager.createQuery(queryString);
+                            query.setParameter("login", logged);
+                            List<ShiftFTW> products = query.getResultList();
+                            if (products.size()==1){
+                                System.out.println("Unable to close shift - non of yours is open");
+                            }else{
+                                ShiftFTW s = entityManager.find(ShiftFTW.class,products.get(0).getID_FTWorker());
+                                entityManager.getTransaction().begin();
+                                s.endShiftFTW();
+                                entityManager.getTransaction().commit();
+                            }
+                        }
+                        else
+                        {
+                            String queryString = "SELECT p FROM ShiftPTW p WHERE p.worker = :login ORDER BY p.shiftStart DESC ";
+                            Query query = entityManager.createQuery(queryString);
+                            query.setParameter("login", logged);
+                            List<ShiftPTW> products = query.getResultList();
+                            if (products.size()==1){
+                                System.out.println("Unable to close shift - non of yours is open");
+                            }else {
+                                //DATA UPDATE !
+                                ShiftPTW s = entityManager.find(ShiftPTW.class, products.get(0).getID_PTWorker());
+                                entityManager.getTransaction().begin();
+                                s.endShiftPTW();
+                                entityManager.getTransaction().commit();
+                            }
+                        }
+                        System.out.println("You just closed your last shift !");
+
+                        break;
+                    case "a":
+                        if (isAccountant==1) {
+                            AccountantPlatform test = new AccountantPlatform();
+                            test.menu(entityManager);
+                        }else {
+                            System.out.print("You have no power here :/");
+                        }
+                        break;
+                    case "d":
+                        if (isAccountant==1) {
+                            System.out.println("Who would you like to delete ? \n f - fulltime worker  \n p- part-time worker" );
+                            try {
+                                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+                                element = obj.readLine();
+                            } catch (IOException e) {
+                                System.out.print("Unable to read character from file_type");
+                            }
+                            if (element.equals("p"))
+                                deletePartTimeWorker(entityManager);
+                            else if (element.equals("f"))
+                                deleteFullTimeWorker(entityManager , logged);
+                        }else {
+                            System.out.print("You have no power here :/");
+                        }
+                        break;
+                    case "c":
+                        sesja = "2";
+                        break;
+                }
+            }
+    }
     /**
      * Function with the menu, which allows user to log in, and to perform some operations
      * @param args
      * @throws SQLException
      */
-    public static void main(String[] args) throws SQLException {
+    /**
+     * Main class for whole project
+     * @param args
+     */
+    public static void main(String[] args) {
 
         //data loading
         Scanner scan = new Scanner(System.in);
-        System.out.print("Hello World\n");
         loadData();
-        //System.out.print("Bye World");
-
-        //Conecting to the database
         String dbURL = "jdbc:derby://localhost:1527/BazaPracownikow;create=true";
-        Connection conn = null;
-        try
-        {
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
-            //Get a connection
-            conn = DriverManager.getConnection(dbURL);
-        }
-        catch (Exception except)
-        {
-            except.printStackTrace();
-        }
 
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         //logging in
         boolean logging = false;
+        Worker logged = null;
         boolean is_fulltime = false;
         int is_accountant = 0;
+        //DATA VALIDATION
         while (logging == false) {
             System.out.println("Login: \n");
             String Login = scan.nextLine();
             System.out.println("Password: \n");
             String Password = scan.nextLine();
-            logging = loggin_in(Login, Password, entityManager);
-
-            is_fulltime = is_fulltime(Login, entityManager);
-            if (is_fulltime == true)
-                is_accountant = if_accountant_ft(Login, entityManager);
-
-        }
-        /*
-        System.out.println("Aby rozpoczac sesje, kliknij 1: \n");
-        String sesja = scan.nextLine();
-
-
-        if(sesja.equals("1")) {
-            if(is_accountant == 1) {
-                String Operation_Type = null;
-                while (sesja.equals("1")) {
-                    System.out.println("What would you like to do? Retrieve/Update/Delete/Close session \n");
-                    Operation_Type = scan.nextLine();
-                    switch (Operation_Type) {
-                        case "Retrieve":
-                            retrieve_data(conn);
-                            break;
-                        case "Update":
-                            update_data(conn);
-                            break;
-                        case "Delete":
-                            delete_data(conn);
-                            break;
-                        case "Close":
-                            sesja = "2";
-                            break;
-                    }
-                }
+            logged = loggin_in(Login, Password, entityManager);
+            if (logged!=null)
+            {
+                logging = true;
             }
+            else System.out.println("Unable to login");
+            is_fulltime = isFulltime(Login, entityManager);
+            if (is_fulltime == true)
+                is_accountant = ifAccountantFt(Login, entityManager);
         }
-
-         */
+        mainMenu(entityManager,logged,is_accountant,is_fulltime);
         entityManager.close();
     }
 
@@ -115,71 +187,129 @@ public class LoadingData {
         entityManager.close();
     }
 
+    /**
+     * A method that permanently deletes Part Time Worker from  workers and Shifts
+     * @param em entity manager for whole program
+     */
+    private static void deletePartTimeWorker(EntityManager em){
+        //Show list of all part time worker
+        String queryString = "SELECT p FROM PartTimeWorker p ";
+        Query query = em.createQuery(queryString);
+        List<PartTimeWorker> products = query.getResultList();
+        for ( PartTimeWorker p : products) {
+            System.out.println(p.toString()+"\n please specify ID of worker ");
+        }
+        String element ="";
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            element = obj.readLine();
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+        PartTimeWorker w = em.find(PartTimeWorker.class ,Long.parseLong(element));
+        //delete them from shifts
+        if(w!= null) {
+            String queryString2 = "DELETE FROM ShiftPTW p WHERE p.worker = :worker";
+            Query query2 = em.createQuery(queryString2);
+            query2.setParameter("worker", w);
+            //delete this full time worker
+            em.getTransaction().begin();
+            em.remove(w);
+            em.getTransaction().commit();
+        }
+        //delete this full time worker
+    }
 
     /**
-     * Function which provides loggin features
+     * A method that permanently deletes Full Time Worker from  workers and Shifts
+     * @author Aleksandra Rezetka
+     * @param em entity manager for whole program
+     */
+    private static void deleteFullTimeWorker(EntityManager em , Worker logged){
+        //Show list of all part time worker
+        String queryString = "SELECT p FROM FullTimeWorker p ";
+        Query query = em.createQuery(queryString);
+        List<FullTimeWorker> products = query.getResultList();
+        for ( FullTimeWorker p : products) {
+            System.out.println(p.toString()+"\n please specify ID of worker ");
+        }
+        String element ="";
+        try {
+            BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+            element = obj.readLine();
+        } catch (IOException e) {
+            System.out.print("Unable to read character from file_type");
+        }
+        FullTimeWorker w = em.find(FullTimeWorker.class ,Long.parseLong(element));
+        //delete them from shifts
+        if(w!= null && !logged.equals(w)) {
+            String queryString2 = "DELETE FROM ShiftFTW p WHERE p.worker = :worker";
+            Query query2 = em.createQuery(queryString2);
+            query2.setParameter("worker", w);
+            //delete this full time worker
+            em.getTransaction().begin();
+            em.remove(w);
+            em.getTransaction().commit();
+        } else  if (logged.equals(w)){
+            System.out.print("You can't delete yourself ! /n ");
+        }
+    }
+
+    /**
+     * @author Maciej Adamczyk
      * @param login
      * @param log_password
-     * @param conn
+     * @param em
      * @return
-     * @throws SQLException
      */
-    private static boolean loggin_in(String login, String log_password, EntityManager em){
+    private static Worker loggin_in(String login, String log_password, EntityManager em){
         String queryString = "SELECT p FROM FullTimeWorker p WHERE p.login LIKE :login";
         Query query = em.createQuery(queryString);
         query.setParameter("login", login);
-        List<FullTimeWorker> products = query.getResultList();
+        List<Worker> products = query.getResultList();
         if (products.size() > 0) {
             if(products.get(0).getPassword().equals(log_password)) {
-                return true;
+                return products.get(0);
             }
             else
-                return false;
+                return null;
         }
         else {
             String queryString2 = "SELECT p FROM PartTimeWorker p WHERE p.login LIKE :login";
             Query query2 = em.createQuery(queryString2);
             query2.setParameter("login", login);
-            List<PartTimeWorker> products2 = query2.getResultList();
+            List<Worker> products2 = query2.getResultList();
             if (products2.size() > 0) {
                 if(products2.get(0).getPassword().equals(log_password)) {
-                    return true;
+                    return products2.get(0);
                 }
                 else
-                    return false;
+                    return null;
             }
             else {
-                return false;
+                return null;
             }
 
         }
 
     }
-
-    /**
-     * Function which checks if full time worker is an accountant
-     * @param login
-     * @param conn
-     * @return
-     * @throws SQLException
-     */
-    private static int if_accountant_ft(String login, EntityManager em) {
+    private static int ifAccountantFt(String login, EntityManager em) {
         String queryString = "SELECT p FROM FullTimeWorker p WHERE p.login LIKE :login";
         String queryString2 = "SELECT p FROM Department p";
         Query query = em.createQuery(queryString);
-        Query query2 = em.createQuery(queryString2);;
+        query.setParameter("login", login);
+        Query query2 = em.createQuery(queryString2);
         List<FullTimeWorker> products = query.getResultList();
         List<Department> products2 = query2.getResultList();
-        if (products.get(1).getDepartment() == products2.get(6)) {
+        if (products.get(0).getDepartment() == products2.get(6)) {
             return 1;
         }
         else return 0;
     }
-
-    private static boolean is_fulltime(String login, EntityManager em){
+    private static boolean isFulltime(String login, EntityManager em){
         String queryString = "SELECT p FROM FullTimeWorker p WHERE p.login LIKE :login";
         Query query = em.createQuery(queryString);
-        query.setParameter("login", "login");
+        query.setParameter("login", login);
         List<FullTimeWorker> products = query.getResultList();
         if (products.size() > 0) {
             if (products.get(0).getLogin().equals(login)) {
@@ -189,55 +319,5 @@ public class LoadingData {
         }
         return false;
     }
-
-
-
-    /**
-     * Function which allows deleting a record from the databse
-     * @param conn
-     */
-    private static void delete_data(Connection conn) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("From which table you want to delete: \n");
-        String table = scan.nextLine();
-        System.out.println("What is the condition?: \n");
-        String condition = scan.nextLine();
-        try {
-            Statement stmt = conn.createStatement();
-            ResultSet result = stmt.executeQuery("DELETE FROM " + table + " WHERE " + condition);
-        }
-        catch (SQLException sqlExcept)
-        {
-            sqlExcept.printStackTrace();
-        }
-    }
-
-    /**
-     * Function which allows selecting data from the database
-     * @param conn
-     */
-    private static void retrieve_data(Connection conn) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Which column you want to select: \n");
-        String column = scan.nextLine();
-        System.out.println("In what table?: \n");
-        String table = scan.nextLine();
-        System.out.println("Is there any condition? If no, press None, else enter a condition: \n");
-        String condition = scan.nextLine();
-        try {
-            Statement stmt = conn.createStatement();
-            if (condition.equals("None")) {
-                ResultSet result = stmt.executeQuery("SELECT " + column + " FROM " + table);
-            }
-            else {
-                ResultSet result = stmt.executeQuery("SELECT " + column + " FROM " + table + " WHERE " + condition);
-            }
-        }
-        catch (SQLException sqlExcept)
-        {
-            sqlExcept.printStackTrace();
-        }
-    }
-
 
 }

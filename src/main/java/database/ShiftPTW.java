@@ -6,58 +6,38 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+
 /**
  * This class represents worker shift
  * it has a data about the start and end time as well as sum of hours spend in work
  * @version 08/05/2020/v2
  * @author Aleksandra Rezetka
+ * @update 10.05 to the database form
  */
 @Entity
 @Data
+@Getter @Setter
+
 public class ShiftPTW implements Cloneable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long ID_PTWorker;
-    @Getter
-    @Setter
+
     @ManyToOne
-    private PartTimeWorker worker;
-    @Getter @Setter
+    private Worker worker;
     private LocalDateTime shiftStart;
-    @Getter @Setter
     private LocalDateTime shiftEnd;
-    @Getter @Setter
     private long noOfHours;
-    public PartTimeWorker getWorker() {
+    public Worker getWorker() {
         return worker;
     }
 
-    public void setWorker(PartTimeWorker worker) {
-        this.worker = worker;
-    }
+    public ShiftPTW(Worker worker) {
+        this.worker = (PartTimeWorker) worker;
+        this.noOfHours = 0;
+        this.shiftStart = null;
+        this.shiftEnd = null;
 
-    public LocalDateTime getShiftStart() {
-        return shiftStart;
-    }
-
-    public void setShiftStart(LocalDateTime shiftStart) {
-        this.shiftStart = shiftStart;
-    }
-
-    public LocalDateTime getShiftEnd() {
-        return shiftEnd;
-    }
-
-    public void setShiftEnd(LocalDateTime shiftEnd) {
-        this.shiftEnd = shiftEnd;
-    }
-
-    public long getNoOfHours() {
-        return noOfHours;
-    }
-
-    public void setNoOfHours(long noOfHours) {
-        this.noOfHours = noOfHours;
     }
 
     /**
