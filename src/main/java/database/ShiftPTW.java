@@ -59,4 +59,23 @@ public class ShiftPTW implements Cloneable{
     public void setNoOfHours(long noOfHours) {
         this.noOfHours = noOfHours;
     }
+
+    /**
+     * Method that starts shift
+     */
+
+    public void startShiftPTW(){
+        setShiftStart(LocalDateTime.now());
+        System.out.println("shift.Shift was started");
+    }
+
+    /**
+     * Method that ends shift - it also calcuate noOfHours and takes in count night shifts
+     */
+    public void endShiftPTW(){
+        setShiftEnd(LocalDateTime.now());
+        long diff = java.time.Duration.between(getShiftStart(), shiftEnd).toHours();
+        setNoOfHours(diff);
+        System.out.println("shift.Shift was ended");
+    }
 }
