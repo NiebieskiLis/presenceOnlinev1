@@ -1,5 +1,4 @@
 package database;
-
 import java.time.LocalDateTime;
 import javax.persistence.*;
 import lombok.Data;
@@ -37,25 +36,26 @@ public class ShiftPTW implements Cloneable{
         this.noOfHours = 0;
         this.shiftStart = null;
         this.shiftEnd = null;
-
     }
 
     /**
      * Method that starts shift
      */
 
-    public void startShiftPTW(){
+    public boolean startShiftPTW(){
         setShiftStart(LocalDateTime.now());
         System.out.println("shift.Shift was started");
+        return true;
     }
 
     /**
      * Method that ends shift - it also calcuate noOfHours and takes in count night shifts
      */
-    public void endShiftPTW(){
+    public boolean endShiftPTW(){
         setShiftEnd(LocalDateTime.now());
         long diff = java.time.Duration.between(getShiftStart(), shiftEnd).toHours();
         setNoOfHours(diff);
         System.out.println("shift.Shift was ended");
+        return true;
     }
 }
