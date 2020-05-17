@@ -74,18 +74,20 @@ public class ShiftFTW implements Cloneable{
         this.shiftEnd = null;
 
     }
-    public void startShiftFTW(){
+    public boolean startShiftFTW(){
         setShiftStart(LocalDateTime.now());
         System.out.println("shift.Shift was started");
+        return true;
     }
 
     /**
      * Method that ends shift - it also calcuate noOfHours and takes in count night shifts
      */
-    public void endShiftFTW(){
+    public boolean endShiftFTW(){
         setShiftEnd(LocalDateTime.now());
         long diff = java.time.Duration.between(getShiftStart(), shiftEnd).toHours();
         setNoOfHours(diff);
         System.out.println("shift.Shift was ended");
+        return true;
     }
 }

@@ -14,18 +14,22 @@ import java.util.Scanner;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@Getter @Setter
+
 public abstract class Worker implements Comparable<Worker> , Cloneable , Serializable {
     @Id
+    @Getter @Setter
     @GeneratedValue(strategy = GenerationType.TABLE)
     protected long ID;
+    @Getter @Setter
     protected String login;
+    @Getter @Setter
     protected String password;
+    @Getter @Setter
     protected String name;
+    @Getter @Setter
     protected String surname;
+    @Getter @Setter
     protected int cashPerHour;
-
-
 
     /**
      * constructor for an abstract class that gets all the info about worker

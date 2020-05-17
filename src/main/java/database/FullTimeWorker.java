@@ -76,7 +76,7 @@ public class FullTimeWorker extends Worker {
     public String toString() {
         return getLogin()+ " "+getID() +" "+getName() +" "+ getSurname();
     }
-    public static FullTimeWorker chooseFullTimeWorker(EntityManager em){
+    public static FullTimeWorker chooseFullTimeWorker(EntityManager em ,  BufferedReader obj){
         String element = "";
         FullTimeWorker x =null;
         while (x == null) {
@@ -88,9 +88,7 @@ public class FullTimeWorker extends Worker {
                 System.out.println(p.toString());
             }
             System.out.println("Please specify ID \n ");
-
             try {
-                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
                 element = obj.readLine();
             } catch (IOException e) {
                 System.out.print("Unable to read character from file_type");
