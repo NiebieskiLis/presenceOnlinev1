@@ -3,8 +3,6 @@ package database;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
-import java.util.ArrayList;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
@@ -16,9 +14,6 @@ import java.util.List;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 /**
  * A class that generate data from JSON file generated from mockaroo.com
@@ -37,34 +32,42 @@ public class CreateData  {
      * @param filename - a path where json file with data exists
      * @param entityManager - entity manager that creates connection
      */
-    public void createDepartments(String filename,  EntityManager entityManager){
+    public boolean createDepartments(String filename,  EntityManager entityManager){
         String line = null;
         JSONObject obj;
         ReadWriteLock myLock = new ReentrantReadWriteLock();
         myLock.readLock().lock();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))){
-            while((line = br.readLine()) != null) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+            while ((line = br.readLine()) != null) {
                 obj = (JSONObject) new JSONParser().parse(line);
                 String department = (String) obj.get("Department");
                 Department ftw = new Department(department);
+                System.out.println(ftw.getDepartment().toString());
                 EntityTransaction tx = entityManager.getTransaction();
                 tx.begin();
                 entityManager.persist(ftw);
                 tx.commit();
 
             }
+
         }catch(FileNotFoundException f)
         {
-            f.printStackTrace();
-        } catch(ParseException e){
+           System.out.println("File doesn't exist");
+           return false;
+        }
+        catch(ParseException e){
             e.printStackTrace();
+            return false;
+
         } catch(IOException e){
             e.printStackTrace();
+            return false;
+
         }finally {
             myLock.readLock().unlock();
         }
-
+        return true;
     }
 
     /**This method creates a list of full-time workers from the json file while using JSONPARSER and JSONObject

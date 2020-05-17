@@ -12,19 +12,7 @@ import java.util.GregorianCalendar;
 @Entity
 @Getter @Setter
 public class PartTimeWorker extends Worker {
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private int ID_PartTimeWorker;
-//    @Getter @Setter
-//    private String login;
-//    @Getter @Setter
-//    private String password;
-//    @Getter @Setter
-//    private String name;
-//    @Getter @Setter
-//    private String surname;
-//    @Getter @Setter
-//    private int cashPerHour;
+
     private int minNumberOfHours;
     @ManyToOne
     private FullTimeWorker supervisor;
@@ -35,7 +23,7 @@ public class PartTimeWorker extends Worker {
     public  PartTimeWorker(){
 
     }
-    public PartTimeWorker(String login, String password, String name, String surname, int cashPerHour,  String login1, String password1, String name1, String surname1, int cashPerHour1, int minNumberOfHours, FullTimeWorker supervisor, Date expirationDate, Department department) {
+    public PartTimeWorker(String login1, String password1, String name1, String surname1, int cashPerHour1, int minNumberOfHours, FullTimeWorker supervisor, Date expirationDate, Department department) {
         this.login = login1;
         this.password = password1;
         this.name = name1;

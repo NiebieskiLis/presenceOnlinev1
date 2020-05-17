@@ -35,7 +35,7 @@ public class Department {
     public Department( String department) {
         Department = department;
     }
-    public static Department chooseDepartment(EntityManager em){
+    public static Department chooseDepartment(EntityManager em , BufferedReader obj){
         String element = "";
         Department x =null;
         while (x == null) {
@@ -47,15 +47,12 @@ public class Department {
                 System.out.println(p.toString());
             }
             System.out.println("Please specify ID \n ");
-
             try {
-                BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
                 element = obj.readLine();
             } catch (IOException e) {
                 System.out.print("Unable to read character from file_type");
             }
             x = em.find(Department.class, Long.parseLong(element));
-
         }
         return x;
     }
