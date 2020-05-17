@@ -52,7 +52,12 @@ public class Department {
             } catch (IOException e) {
                 System.out.print("Unable to read character from file_type");
             }
-            x = em.find(Department.class, Long.parseLong(element));
+            try {
+                x = em.find(Department.class, Long.parseLong(element));
+            }catch (NumberFormatException nfe) {
+                System.out.print("It is not a number !");
+                x=null;
+            }
         }
         return x;
     }

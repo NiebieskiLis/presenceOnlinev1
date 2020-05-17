@@ -1,5 +1,4 @@
 package database;
-
 import java.time.LocalDateTime;
 import javax.persistence.*;
 import lombok.Data;
@@ -37,7 +36,6 @@ public class ShiftPTW implements Cloneable{
         this.noOfHours = 0;
         this.shiftStart = null;
         this.shiftEnd = null;
-
     }
 
     /**

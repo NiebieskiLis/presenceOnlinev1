@@ -75,12 +75,12 @@ public class CreateData  {
      * @param filename it takes path to the json file with data
      * @param entityManager
      */
-    public void createFullTimeWorker(String filename, EntityManager entityManager){
+    public boolean createFullTimeWorker(String filename, EntityManager entityManager){
         List<Department> departments;
         String queryString = "SELECT p FROM Department p";
         Query query = entityManager.createQuery(queryString);
         departments = query.getResultList();
-
+        System.out.println(departments.get(0).getID_Department());
         String line = null;
         String password;
         JSONObject obj;
@@ -106,13 +106,17 @@ public class CreateData  {
                 tx.commit();
             }
             System.out.println("Added all of the workers to DB");
+            return true;
         }catch(FileNotFoundException f)
         {
             f.printStackTrace();
+            return false;
         } catch(ParseException e){
             e.printStackTrace();
+            return false;
         } catch(IOException e){
             e.printStackTrace();
+            return false;
         }finally {
             myLock.readLock().unlock();
         }
@@ -124,7 +128,7 @@ public class CreateData  {
      * @param filename
      * @param entityManager
      */
-    public void createPartTimeWorker(String filename , EntityManager entityManager ){
+    public boolean createPartTimeWorker(String filename , EntityManager entityManager ){
         String line = null;
         List<Department> departments ;
         List<FullTimeWorker> fulltime ;
@@ -148,11 +152,11 @@ public class CreateData  {
 
                 int min = Integer.valueOf(obj.get("minNumberOfHours").toString());
                 //PartTimeWorker.Department department = ((PartTimeWorker.Department) obj.get("department"));
-                FullTimeWorker supervisor = fulltime.get(Integer.valueOf(obj.get("supervisorID").toString()));
+                FullTimeWorker supervisor = fulltime.get(Integer.valueOf(obj.get("supervisorID").toString())-1);
                 int year = Integer.valueOf(obj.get("year").toString());
                 int month = Integer.valueOf(obj.get("month").toString());
                 int day = Integer.valueOf(obj.get("day").toString());
-                Department department=departments.get(Integer.valueOf(obj.get("department").toString()));
+                Department department=departments.get(Integer.valueOf(obj.get("department").toString())-1);
                 PartTimeWorker ftw = new PartTimeWorker(password, name, surname, cash, min, department, supervisor, year, month, day);
                 EntityTransaction tx = entityManager.getTransaction();
                 tx.begin();
@@ -162,12 +166,16 @@ public class CreateData  {
         }catch(FileNotFoundException f)
         {
             f.printStackTrace();
+            return false;
         } catch(ParseException e){
             e.printStackTrace();
+            return false;
         } catch(IOException e){
             e.printStackTrace();
+            return false;
         }finally {
             myLock.readLock().unlock();
         }
+        return true;
     }
 }
