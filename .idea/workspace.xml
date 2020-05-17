@@ -20,19 +20,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="All of the Interface is working proprely and is secured :)">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_12_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_vintage_junit_vintage_engine_5_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_2_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_2_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_2_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_2_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_2_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_2_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_2_7_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_2_6_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DatabaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/AccountantPlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/AccountantPlatform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/LoadingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/LoadingData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/PartTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/PartTimeWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/CreateData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/CreateData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/FullTimeWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/FullTimeWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/LoadingData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/LoadingData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/PartTimeWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/PartTimeWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/ShiftPTW.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/ShiftPTW.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PresenceOnline.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PresenceOnline.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +96,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/../../.." value="devel" />
-        <entry key="$PROJECT_DIR$" value="devel" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,6 +216,7 @@
       <workItem from="1589024293358" duration="12853000" />
       <workItem from="1589102594406" duration="5428000" />
       <workItem from="1589108452410" duration="1294000" />
+      <workItem from="1589712847532" duration="479000" />
     </task>
     <task id="LOCAL-00001" summary="Added TCP Server">
       <created>1587766378644</created>
@@ -387,10 +425,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589103054607" />
-    <state x="598" y="108" key="Maven.ArtifactSearchDialog" timestamp="1588955415955">
+    <state x="598" y="108" key="Maven.ArtifactSearchDialog" timestamp="1589713191725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="598" y="108" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1588955415955" />
+    <state x="598" y="108" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1589713191725" />
     <state x="520" y="0" key="SettingsEditor" timestamp="1589108076598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
