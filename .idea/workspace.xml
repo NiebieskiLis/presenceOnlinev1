@@ -19,23 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="Added Database and mockito &amp; junit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/MainMenuTest.java" afterDir="false" />
+    <list default="true" id="0fcee98c-4745-4660-b3ec-85d9f3dba029" name="Default Changelist" comment="Added test for data load and methods that are used in main interface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/CreateData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/CreateData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Department.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/FullTimeWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/LoadingData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/LoadingData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/PartTimeWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/PartTimeWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/ShiftFTW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/ShiftFTW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/ShiftPTW.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/ShiftPTW.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DatabaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DatabaseTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/CreateData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/CreateData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/Department.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/FullTimeWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/FullTimeWorker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/LoadingData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/LoadingData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/PartTimeWorker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/PartTimeWorker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainMenuTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainMenuTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database/ShiftFTW.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database/ShiftFTW.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +90,7 @@
       <recent name="C:\Users\Aleksandra\IdeaProjects\presence_online\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MainMenuTest.ShiftTestPTW">
+  <component name="RunManager" selected="Application.LoadingData">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -112,14 +99,17 @@
         <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatabaseTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoadingData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="database.LoadingData" />
       <module name="PresenceOnline" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DatabaseTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="MainMenuTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -174,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoadingData" />
         <item itemvalue="JUnit.MainMenuTest.ShiftTestPTW" />
         <item itemvalue="JUnit.MainMenuTest" />
         <item itemvalue="JUnit.MainMenuTest.mainMenuTestLogging" />
         <item itemvalue="JUnit.MainMenuTest.addPTW" />
-        <item itemvalue="JUnit.DatabaseTests" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +192,7 @@
       <workItem from="1589024293358" duration="12853000" />
       <workItem from="1589102594406" duration="5428000" />
       <workItem from="1589108452410" duration="1294000" />
-      <workItem from="1589712847532" duration="19229000" />
+      <workItem from="1589712847532" duration="20266000" />
     </task>
     <task id="LOCAL-00001" summary="Added TCP Server">
       <created>1587766378644</created>
@@ -295,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589713548590</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added test for data load and methods that are used in main interface">
+      <created>1589732516934</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589732516934</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +326,8 @@
     <MESSAGE value="Fully functioning Database and data entites according to our schema" />
     <MESSAGE value="All of the Interface is working proprely and is secured :)" />
     <MESSAGE value="Added Database and mockito &amp; junit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Database and mockito &amp; junit" />
+    <MESSAGE value="Added test for data load and methods that are used in main interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test for data load and methods that are used in main interface" />
   </component>
   <component name="WindowStateProjectService">
     <state x="668" y="304" key="#Assign_Data_Sources" timestamp="1588948299533">
@@ -362,6 +360,10 @@
     </state>
     <state x="942" y="241" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1587937232935" />
     <state x="2355" y="620" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.3840.2120@0.0.3840.2120" timestamp="1587824405388" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589732537684">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1589732537684" />
     <state x="424" y="9" key="CommitChangelistDialog2" timestamp="1587770210685">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -370,25 +372,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588935641436" />
-    <state width="1493" height="241" key="GridCell.Tab.0.bottom" timestamp="1589731914192">
+    <state width="1493" height="39" key="GridCell.Tab.0.bottom" timestamp="1589732788547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589731914192" />
+    <state width="1493" height="39" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589732788547" />
     <state width="1877" height="382" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
-    <state width="1493" height="241" key="GridCell.Tab.0.center" timestamp="1589731914192">
+    <state width="1493" height="39" key="GridCell.Tab.0.center" timestamp="1589732788547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589731914192" />
+    <state width="1493" height="39" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589732788547" />
     <state width="1877" height="382" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
-    <state width="1493" height="241" key="GridCell.Tab.0.left" timestamp="1589731914192">
+    <state width="1493" height="39" key="GridCell.Tab.0.left" timestamp="1589732788546">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589731914192" />
+    <state width="1493" height="39" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589732788546" />
     <state width="1877" height="382" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
-    <state width="1493" height="241" key="GridCell.Tab.0.right" timestamp="1589731914192">
+    <state width="1493" height="39" key="GridCell.Tab.0.right" timestamp="1589732788547">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="241" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589731914192" />
+    <state width="1493" height="39" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589732788547" />
     <state width="1877" height="382" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589109693845" />
     <state width="1493" height="226" key="GridCell.Tab.1.bottom" timestamp="1589731876321">
       <screen x="0" y="0" width="1536" height="824" />

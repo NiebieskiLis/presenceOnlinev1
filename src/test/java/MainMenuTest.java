@@ -14,7 +14,7 @@ import java.util.List;
 
 
 /**
- *
+ *I just made test for following classes
  * @author AleksandraRezetka
  */
 @RunWith(MockitoJUnitRunner.class)
